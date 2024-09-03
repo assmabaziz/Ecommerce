@@ -1,0 +1,53 @@
+<div class="shadow-lg shadow-gray-300 bg-[#efeffa] p-5 rounded-lg max-w-[50%] mx-auto">
+  <h1 class="text-[30px] font-light capitalize">{{'logIn.logIn now:' | translate}}</h1>
+
+  <form class="max-w-[90%] mx-auto" [formGroup]="loginForm" (ngSubmit)=" loginSubmit()">
+    <div class="mb-3">
+      <label for="email" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'logIn.email:' | translate}}
+      </label>
+      <input formControlName="email" type="email" id="email"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5  " />
+      @if(loginForm.get('email')?.errors && loginForm.get('email')?.touched && loginForm.get('email')?.dirty ) {
+      <div class="bg-red-200 w-3/4 p-2 rounded-lg mt-2">
+        @if(loginForm.get('email')?.getError('required'))
+        {
+        <p>
+          {{'logIn.email required' | translate}}
+        </p>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-3 relative">
+      <label for="password" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'logIn.password:' | translate}}
+      </label>
+      <input formControlName="password" type="password" id="password"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5" />
+        @if(loginForm.get('password')?.errors && loginForm.get('password')?.touched){
+      @if(loginForm.get('password')?.getError('required')) {
+      <div class="bg-red-200 w-3/4 p-2 rounded-lg mt-2">
+        <p>{{'logIn.password required' | translate}}</p>
+      </div>
+      }
+      }
+    </div>
+    @if(isSuccess){
+    <div class="bg-red-200 w-3/4 rounded-lg p-2 mb-3">
+      <p>{{msgError}}</p>
+    </div>
+    }
+    <div class="flex justify-end items-center gap-4">
+      <p class="text-[#00f] cursor-pointer" routerLink="/forget">
+        {{'logIn.forgot password?' | translate}}
+        </p>
+      <button type="submit"
+        class="text-white bg-[#0000FF] hover:bg-[#3232ff]  focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:bg-gray-300 disabled:cursor-no-drop  block ms-auto">{{'logIn.Login' | translate }}
+        @if(isLoading){
+        <i class="fa-solid fa-spin fa-spinner"></i>
+        }
+      </button>
+    </div>
+  </form>
+</div>

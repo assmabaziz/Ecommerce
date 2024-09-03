@@ -1,0 +1,13 @@
+<section>
+  <h1 class="text-5xl text-center capitalize py-10">{{"brands.Our partners:" | translate}}</h1>
+  <div class="container max-w-screen-xl  grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-10 ">
+     @for (brand of brandsList; track brand._id) {
+    <figure class="overflow-hidden group relative border-[1px] rounded-lg  border-[#00f] hover:shadow-md hover:shadow-[#4a4a91] duration-300" [routerLink]="['/brandDetails', brand._id]">
+        <img [src]="brand.image" class="w-full" [alt]="brand.name" />
+        <figcaption class="p-2">
+          <h2 class="text-center font-semibold text-xl mb-3">{{brand.name}}</h2>
+        </figcaption>
+    </figure>
+    }
+  </div>
+</section>

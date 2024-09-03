@@ -1,0 +1,43 @@
+<section class="container grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-10 max-w-screen-xl">
+  @for (item of wishList; track $index) {
+    <figure class="overflow-hidden group  border-[1px] rounded-lg  border-[#00f] hover:shadow-md hover:shadow-[#4a4a91] duration-300">
+      <div class="relative">
+        <div class=" group">
+          <div class="flex items-center justify-center gap-6 absolute top-0 bottom-0 right-0 left-0 opacity-0 duration-700 group/item hover:opacity-100">
+            <span class="inline-block bg-white p-2 border-[1px] border-black rounded-lg text-gray-900 duration-700 hover:text-[#fff] hover:bg-[#00f]">
+              <i class="fa-solid fa-heart-circle-minus text-2xl cursor-pointer" (click)="removerWishProduct(item.id, $index)"></i>
+            </span>
+            <span class="inline-block bg-white p-2 border-[1px] border-black rounded-lg text-gray-900 duration-700 hover:text-[#fff] hover:bg-[#00f]">
+             <i class="fa-regular text-2xl fa-eye cursor-pointer"  [routerLink]="['/details', item.id]"></i>
+            </span>
+          </div>
+          <img [src]="item.imageCover" class="w-full h-[250px]" [alt]="item.title" />
+        </div>
+        <figcaption class="p-2">
+          <h2 class="text-blue-800 font-semibold text-xl mb-3">{{item.category.name}}</h2>
+          <h3>{{item.title.split(" ", 2).join(" ")}}</h3>
+          <div class="flex justify-between items-center mb-3">
+              <span class="text-red-400 font-semibold">{{item.price}}</span>
+            <div>
+              @for (item of [1,2,3,4,5].slice(0, item.ratingsAverage); track $index) {
+              <span><i class="fa-solid fa-star text-yellow-300"></i></span>
+              }
+              @if(item.ratingsAverage %1 !== 0) {
+              <i class="fa-regular fa-star text-yellow-300"></i>
+              }
+              {{item.ratingsAverage}}
+            </div>
+          </div>
+        </figcaption>
+      </div>
+      <div class="flex justify-between items-center p-2">
+        <span class="text-red-400 font-semibold">{{item.price | currency}}</span>
+        <button
+        class="bg-[#4a4af7] rounded-lg text-[#fff] p-1 hover:bg-[#00f]" (click)="addProductToCart(item.id)">
+        <i class="fa-solid fa-plus"></i>
+        Add
+      </button>
+      </div>
+    </figure>
+  }
+</section>

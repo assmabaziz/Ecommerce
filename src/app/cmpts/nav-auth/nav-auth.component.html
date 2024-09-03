@@ -1,0 +1,74 @@
+<nav class="top-0 left-0 right-0 shadow-lg shadow-black-100">
+  <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+    <a routerLink="home" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="./assets/images/lastLogo.png" class="h-12" alt="DirDora Logo" />
+    </a>
+    <div class="hidden w-full md:block md:w-auto " id="navbar-default">
+      <ul class="font-medium flex items-center flex-col md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse">
+
+        <li class="py-2">
+          <a routerLink="home" class="block  text-gray-900 md:p-0 text-2xl duration-500 hover:text-[#0000FF]"
+            aria-current="page"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li class="py-2">
+          <a routerLink="cart"
+            class="block text-gray-900 md:border-0 md:p-0 text-2xl duration-500 hover:text-[#0000FF]"><i
+              class="fa-brands fa-facebook"></i></a>
+        </li>
+
+        <li class="py-2">
+          <a routerLink="" class="block text-gray-900 md:border-0 md:p-0 text-2xl duration-500 hover:text-[#0000FF]"><i
+              class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li class="py-2">
+          <a routerLink="" class="block text-gray-900 md:border-0 md:p-0 text-2xl duration-500 hover:text-[#0000FF]"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+        </li>
+        <li class="py-2">
+          <a routerLink="" class="block text-gray-900 md:border-0 md:p-0 text-2xl duration-500 hover:text-[#0000FF]"><i
+              class="fa-brands fa-youtube"></i></a>
+        </li>
+        <li>
+          <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+            <button type="button" data-dropdown-toggle="language-dropdown-menu"
+              class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+              {{'navbarAuth.language' | translate}}
+            </button>
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700"
+              id="language-dropdown-menu">
+              <ul class="py-2 font-medium" role="none">
+                <li class="cursor-pointer">
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem" (click)="change('en')">
+                    <div class="inline-flex items-center">
+                      {{'navbarAuth.English' | translate}}
+                    </div>
+                  </a>
+                </li>
+                <li class="cursor-pointer">
+                  <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                    role="menuitem" (click)="change('ar')">
+                    <div class="inline-flex items-center">
+                      {{'navbarAuth.Arabic' | translate}}
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a routerLink="login" class="block py-2 px-3 rounded " routerLinkActive="bg-[#0000FF] text-[#f2f2f2]">
+            {{"navbarAuth.login" | translate}}</a>
+        </li>
+        <li>
+          <a routerLink="register" class="block py-2 px-3 rounded" routerLinkActive="bg-[#0000FF] text-[#f2f2f2]">
+            {{"navbarAuth.register" | translate}}</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+

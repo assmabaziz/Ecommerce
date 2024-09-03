@@ -1,0 +1,101 @@
+{
+  "navbarBlank": {
+    "home": "الرئيسية",
+    "products":"المنتجات",
+    "categories":"الاقسام",
+    "brands":"العلامات",
+    "signout":"تسجيل خروج",
+    "language":"اللغة",
+    "English":"الإنجليزية",
+    "Arabic":"العربية"
+  },"navbarAuth": {
+    "login": "دخول",
+    "register":"تسجيل",
+    "language":"اللغة",
+    "English":"الإنجليزية",
+    "Arabic":"العربية"
+  }, "footer" : {
+    "get the DirDora app":"حمل التطبيق الان",
+    "we will send you a link, open it on your phone to download the app.":"سنرسل لك رابطا، افتحه على هاتفك لتحميل التطبيق",
+    "Email address":"البريد الإلكتروني",
+    "send":"ارسال",
+    "payement partners":"طرق الدفع",
+    "get deliveries with DirDora":"احصل على خدمة التوصيل من خلا تطبيقنا"
+  }, "home": {
+    "free shipping - orders over $100":"شحن مجاني - الطلبات التي تزيد عن 100 دولار",
+    "free shipping on orders over":"شحن مجاني للطلبات التي تزيد عن",
+    "free shipping to first-time customers only, after promotions an discounts are applied":"شحن مجاني للعملاء الجدد فقط، بعد تطبيق العروض الترويجية والخصومات",
+    "shop now":"اطلب الان",
+    "Featured Categories":"الفئات المميزة",
+    "Opening Sale Discount 50%":"خصم الافتتاح 50%",
+    "SuperMarket For Fresh Grocery":"سوبر ماركت للمواد الغذائية الطازجة",
+    "Introduced a new model for online grocery shopping and convenient home delivery.":"تم تقديم نموذج جديد للتسوق عبر الإنترنت للبقالة والتوصيل إلى المنازل بشكل مريح.",
+    "10 minute grocery now":"عشر دقائق للتسوق الآن ",
+    " Get your order delivered to your doorstep at the earliest from DirDora pickup stores near you.":" احصل على طلبك ليتم توصيله إلى باب منزلك في أقرب وقت ممكن من متاجر الاستلام القريبة منك.",
+    " Best Prices & Offers":" أفضل الأسعار والعروض",
+    "Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers":" أسعار أرخص من أسعار السوبر ماركت المحلي، وعروض استرداد نقدي رائعة. احصل على أفضل الأسعار والعروض",
+    "Wide Assortment":"تشكيلة واسعة",
+    "Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.":"اختر من بين أكثر من 5000 منتج في مجالات الأغذية والعناية الشخصية والأدوات المنزلية والمخابز والخضراوات وغير النباتية وغيرها من الفئات.",
+    "Easy Returns":"إرجاع سهل",
+    "Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked policy .":"هل أنت غير راضٍ عن المنتج؟ قم بإرجاعه إلى باب منزلك واحصل على استرداد أموالك خلال ساعات. سياسة عدم طرح الأسئلة."
+    }, "categories": {
+      "Sub Categories...":"الفئات الفرعية..."
+    },"brands": {
+      "Our partners:":"شركاؤنا:"
+    },"cart": {
+      "shop cart":"عربة التسوق",
+      "Clear Cart":"حذف جميع المنتجات",
+      "product":"المنتج",
+      "price":"سعر",
+      "category":"فئة",
+      "quantity":"كمية",
+      "delete":"مسح",
+      "total price":"السعر الاجمالي",
+      "continue shopping":"متابعة التسوق",
+      "Total cart price :":"السعر الإجمالي للطلب :",
+      "show your orders...":"إظهار جميع طلباتك السابقة..."
+    },"allorders": {
+      "history of your orders:":"أرشيف طلباتك:",
+      "order created on:":"تم إنشاء الطلب في:",
+      "order price:":"سعر الطلب:"
+    },"logIn": {
+      "logIn now:":"تسجيل الدخول الآن:",
+      "email:":"بريد إلكتروني",
+      "email required":"البريد الإلكتروني مطلوب",
+      "password:":"كلمة المرور",
+      "password required":"مطلوب كلمة مرور",
+      "forgot password?":"هل نسيت كلمة السر؟",
+      "Login":"تسجيل الدخول"
+    },"forgotPassword":{
+      "Email address":"عنوان البريد الإلكتروني",
+      "Email Required":"البريد الإلكتروني مطلوب",
+      "Email should be: example&#64;example.com":"يجب أن يكون البريد الإلكتروني: example&#64;example.com",
+      "verify Email":"التحقق من البريد الإلكتروني",
+      "Code Required":"الرمز مطلوب",
+      "Code should contains 6 caracters":"يجب أن يحتوي الرمز على 6 أحرف",
+      "verify Code":"التحقق من الرمز",
+      "New password":"كلمة المرور الجديدة",
+      "Password Required":"مطلوب كلمة مرور",
+      "Password should be more than 6 caracters":"يجب أن تكون كلمة المرور أكثر من 6 أحرف",
+      "Submit":"إرسال"
+    }, "register": {
+      "regiter a new acount:":"تسجيل حساب جديد:",
+      "name:":"اسم:",
+      "name required:":"الاسم اجباري",
+      "name should be more than 3 caracters":"يجب أن يحتوي الاسم على أكثر من 3 أحرف",
+      "name should be less than 20 caracters":"يجب أن يحتوي الاسم على أقل من 20 حرفًا",
+      "email:":":البريد الإلكتروني",
+      "email required":"البريد الإلكتروني مطلوب",
+      "email should be example&#64;example.com":"يجب أن يكون البريد الإلكتروني example&#64;example.com",
+      "phone:":":رقم الهاتف",
+      "phone required":"الهاتف مطلوب",
+      "phone should be 0123456789":"يجب أن يكون الهاتف 0123456789",
+      "password:":":كلمة المرور",
+      "password required":"كلمة المرور مطلوبة",
+      "password pasword should be more than 6 catracters":"كلمة المرور يجب أن تكون أكثر من 6 أرقام",
+      "repassword:":":إعادة كلمة المرور",
+      "Account Already Exists":"الحساب موجود من قبل",
+      "account successfully created":"تم إنشاء الحساب بنجاح",
+      "Submit":"إرسال"
+    }
+}

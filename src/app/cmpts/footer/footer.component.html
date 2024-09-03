@@ -1,0 +1,66 @@
+<footer class="shadow-[0_35px_30px_15px_rgba(0,0,0,0.9)] py-10">
+  <div class="container max-w-screen-xl">
+    <div class="flex justify-between items-center flex-col md:flex-row">
+      <div class="w-[60%]">
+        <div class="mb-5">
+          <h2 class="text-[30px] font-light text-gray-700">{{'footer.get the DirDora app' |translate}}</h2>
+          <p class="text-gray-400">{{'footer.we will send you a link, open it on your phone to download the app.' | translate}}</p>
+        </div>
+        <div class=" mb-5">
+          <form class="flex items-center justify-center gap-3">
+            <div class="relative z-0 w-full group mb-5 md:mb-0">
+              <input type="email" name="floating_email" id="floating_email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" " />
+              <label for="floating_email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                {{'footer.Email address' | translate}}</label>
+            </div>
+            <button type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">{{'footer.send' | translate}}</button>
+          </form>
+        </div>
+      </div>
+      <div class="w-[30%]">
+        <img src="./assets/images/lastLogo.png" class="h-15 mb-3 mx-auto cursor-pointer" alt="logo DirDora" routerLink="/home">
+        <ul class="flex justify-center items-center  gap-5">
+          <li>
+            <a class="block  text-gray-700 py-2 text-2xl duration-500 hover:text-[#0000FF] cursor-pointer" aria-current="page"><i
+                class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a class="block text-gray-700 py-2 md:border-0 text-2xl duration-500 hover:text-[#0000FF] cursor-pointer"><i
+                class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a class="block text-gray-700 py-2 md:border-0 text-2xl duration-500 hover:text-[#0000FF] cursor-pointer"><i
+                class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a class="block text-gray-700 py-2 md:border-0 text-2xl duration-500 hover:text-[#0000FF] cursor-pointer"><i
+                class="fa-brands fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="py-5 border-y-2 border-gray-300 flex justify-between items-center flex-col md:flex-row ">
+      <div class="flex flex-col md:flex-row items-center gap-x-4 ">
+        <h2 class="capitalize text-[20px] mb-3">{{'footer.payement partners' | translate}}</h2>
+        <a href=""><img src="./assets/images/amazon-pay.png" class="h-5 duration-300 hover:scale-110"
+            alt="Amazon" /></a>
+        <a href=""><img src="./assets/images/American-Express-Color.png" class="h-10 duration-300 hover:scale-110"
+            alt="American-Express-Color" /></a>
+        <a href=""><img src="./assets/images/mastercard.webp" class="h-7 duration-300 hover:scale-110"
+            alt="mastercard" /></a>
+        <a href=""><img src="./assets/images/paypal.png" class="h-10 duration-300 hover:scale-110" alt="paypal" /></a>
+      </div>
+      <div class="flex items-center flex-col md:flex-row gap-x-4">
+        <h2 class="capitalize text-[20px]">{{'footer.get deliveries with DirDora' | translate}}</h2>
+        <a href=""><img src="./assets/images/get-apple-store.png" class="h-10 duration-300 hover:scale-110"
+            alt="apple-store" /></a>
+        <a href=""><img src="./assets/images/get-google-play.png" class="h-11 duration-300 hover:scale-110"
+            alt="google-play" /></a>
+      </div>
+    </div>
+  </div>
+</footer>

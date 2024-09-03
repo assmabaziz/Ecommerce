@@ -1,0 +1,9 @@
+<section>
+  <div class="container max-w-screen-xl  grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-10">
+    @for (subCat of subCtegoryList ; track subCat._id) {
+      <div class="relative  border-[1px] rounded-lg  border-[#00f] min-h-[100px] hover:shadow-md hover:shadow-[#4a4a91] duration-300 flex items-center justify-center">
+        <h2 class="text-center text-xl font-semibold">{{subCat.name}}</h2>
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<section class="container max-w-screen-xl">
+  <h1 class="mb-4 text-xl font-medium capitalize">{{'allorders.history of your orders:' | translate}}</h1>
+  <div  class=" mt-4 mb-10   grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    @for (order of userOrders; track $index) {
+      <div class="border-[1px] border-gray-400 ">
+        <div class="border-b-2 border-gray-400 p-3">
+          <h2 class="font-medium capitalize">
+            {{'allorders.order created on:' | translate}}
+             {{order.createdAt | date: "short"}}</h2>
+          <h3 class="font-medium capitalize">
+            {{'allorders.order price:' | translate}} {{order.totalOrderPrice | currency}}</h3>
+        </div>
+        <div class="p-3 flex flex-col md:flex-row gap-3 flex-wrap">
+          @for (item of userOrders[$index].cartItems; track $index) {
+            <img [src]="item.product.imageCover" class="h-14 cursor-pointer" [routerLink]="['/details', item.product.id]"  [alt]="item.product.title">
+          }
+        </div>
+      </div>
+      }
+  </div>
+
+
+</section>

@@ -1,0 +1,101 @@
+{
+  "navbarBlank": {
+    "home": "HOME",
+    "products":"PRODUCTS",
+    "categories":"CATEGORIES",
+    "brands":"BRANDS",
+    "signout":"SignOut",
+    "language":"Language",
+    "English":"English",
+    "Arabic":"Arabic"
+  },"navbarAuth": {
+    "login": "LOGIN",
+    "register":"REGISTER",
+    "language":"Language",
+    "English":"English",
+    "Arabic":"Arabic"
+  }, "footer" : {
+    "get the DirDora app":"Get The DirDora App",
+    "we will send you a link, open it on your phone to download the app.":"We will send you a link, open it on your phone to download the app",
+    "Email address":"Email Address",
+    "send":"Send",
+    "payement partners":"payement partners",
+    "get deliveries with DirDora":"get deliveries with DirDora"
+  }, "home": {
+    "free shipping - orders over $100":"Free hipping - Orders over $100",
+    "free shipping on orders over":"Free Shipping On Orders Over",
+    "free shipping to first-time customers only, after promotions an discounts are applied":"Free Shipping to First-Time Customers only, after promotions an discounts are applied",
+    "shop now":"Shop Now",
+    "Featured Categories":"Featured Categories",
+    "Opening Sale Discount 50%":"Opening Sale Discount 50%",
+    "SuperMarket For Fresh Grocery":"SuperMarket For Fresh Grocery",
+    "Introduced a new model for online grocery shopping and convenient home delivery. ":"Introduced a new model for online grocery shopping and convenient home delivery. ",
+    "10 minute grocery now":"10 minute grocery now",
+    " Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.":" Get your order delivered to your doorstep at the earliest from FreshCart pickup stores near you.",
+    " Best Prices & Offers":" Best Prices & Offers",
+    " Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers":" Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers",
+    "Wide Assortment":"Wide Assortment",
+    "Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.":"Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.",
+    "Easy Returns":"Easy Returns",
+    "Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked policy .":"Not satisfied with a product? Return it at the doorstep & get a refund within hours. No questions asked policy ."
+  }, "categories": {
+    "Sub Categories...":"Sub Categories..."
+  },"brands": {
+    "Our partners:":"Our partners:"
+  },"cart": {
+    "shop cart":"shop cart",
+    "Clear Cart":"Clear Cart",
+    "product":"product",
+    "price":"price",
+    "category":"category",
+    "quantity":"quantity",
+    "delete":"delete",
+    "total price":"total price",
+    "continue shopping":"continue shopping",
+    "Total cart price :":"Total cart price :",
+    "show your orders...":"show your orders..."
+  },"allorders": {
+    "history of your orders:":"history of your orders:",
+    "order created on:":"order created on:",
+    "order price:":"order price:"
+  },"logIn": {
+    "logIn now:":"logIn now:",
+    "email:":"email:",
+    "email required":"email required",
+    "password:":"password:",
+    "password required":"password required",
+    "forgot password?":"forgot password?",
+    "Login":"Login"
+  },"forgotPassword":{
+    "Email address":"Email address",
+    "Email Required":"Email Required",
+    "Email should be: example&#64;example.com":"Email should be: example&#64;example.com",
+    "verify Email":"verify Email",
+    "Code Required":"Code Required",
+    "Code should contains 6 caracters":"Code should contains 6 caracters",
+    "verify Code":"verify Code",
+    "New password":"New password",
+    "Password Required":"Password Required",
+    "Password should be more than 6 caracters":"Password should be more than 6 caracters",
+    "Submit":"Submit"
+  }, "register": {
+    "regiter a new acount:":"regiter a new acount:",
+    "name:":"name:",
+    "name required:":"name required:",
+    "name should be more than 3 caracters":"name should be more than 3 caracters",
+    "name should be less than 20 caracters":"name should be less than 20 caracters",
+    "email:":"email:",
+    "email required":"email required",
+    "email should be example&#64;example.com":"email should be example&#64;example.com",
+    "phone:":"phone:",
+    "phone required":"phone required",
+    "phone should be 0123456789":"phone should be 0123456789",
+    "password:":"password:",
+    "password required":"password required",
+    "password pasword should be more than 6 catracters":"password pasword should be more than 6 catracters",
+    "repassword:":"repassword:",
+    "Account Already Exists":"Account Already Exists",
+    "account successfully created":"account successfully created",
+    "Submit":"Submit"
+  }
+}

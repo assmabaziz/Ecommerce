@@ -1,0 +1,91 @@
+<div class="container max-w-screen-xl  p-5 my-5">
+  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="flex justify-between items-center px-5">
+      <h1 class="text-3xl font-bold text-[#00f] capitalize mb-5">{{"cart.shop cart" | translate}} ({{result.numOfCartItems}})</h1>
+      <button
+        class="p-2 border-[1px] border-red-500 rounded-lg text-black duration-300 hover:bg-red-500 hover:text-white"
+        (click)="removeAllProducts()">
+        {{"cart.Clear Cart" | translate}}
+        </button>
+    </div>
+
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="text-center py-5 text-xl">
+            {{"cart.product" | translate}}
+          </th>
+          <th scope="col" class="text-center py-5 text-xl">
+            {{"cart.category" | translate}}
+          </th>
+          <th scope="col" class="text-center py-5 text-xl">
+            {{"cart.price" | translate}}
+          </th>
+          <th scope="col" class="text-center py-5 text-xl">
+            {{"cart.quantity" | translate}}
+          </th>
+          <th scope="col" class="text-center py-5 text-xl">
+            {{"cart.delete" | translate}}
+          </th>
+          <th scope="col" class="text-center py-5 text-xl">
+            {{"cart.total price" | translate}}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (cartProduct of cartProducts.products; track $index) {
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <td class="py-4">
+            <img [src]="cartProduct.product.imageCover" class="max-w-[90%] max-h-16 mx-auto"
+              [alt]="cartProduct.product.title" />
+          </td>
+          <td class="py-4 text-center">
+            <p class="text-black text-[18px]">
+              {{cartProduct.product.title}}
+            </p>
+
+          </td>
+          <td class="py-4 text-center">
+            <p class="text-black text-[18px]">
+              {{cartProduct.price | currency}}
+            </p>
+          </td>
+          <td class=" text-center  justify-center items-center gap-4">
+            <i class="fa-solid fa-circle-minus fa-2xl text-blue-500 duration-300 hover:text-[#00f] cursor-pointer"
+              (click)="updateQuantityProducts(cartProduct.product._id, cartProduct.count-1)"></i>
+            <p class="inline-block mx-4 font-medium text-xl text-black">{{cartProduct.count}}</p>
+            <i class="fa-solid fa-circle-plus fa-2xl text-blue-500 duration-300 hover:text-[#00f] cursor-pointer"
+              (click)="updateQuantityProducts(cartProduct.product._id, cartProduct.count+1)"></i>
+          </td>
+          <td class="py-4 text-center">
+            <i class="fa-solid fa-trash text-red-500 fa-2xl duration-700 hover:text-red-800 cursor-pointer"
+              (click)="removeProduct(cartProduct.product._id)"></i>
+          </td>
+          <td class="py-4 text-center">
+            <p class="text-black text-[18px]">
+              {{cartProduct.count * cartProduct.price | currency}}
+            </p>
+
+          </td>
+        </tr>
+        }
+      </tbody>
+      <tfoot class=" bg-slate-500">
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+          <td colspan="6" class="p-5">
+            <div class="flex justify-between items-center">
+              <button
+              class="p-2 border-[1px] border-[#00f] rounded-lg text-black duration-300 hover:bg-[#00f] hover:text-white capitalize" [routerLink]="['/orders', cartProducts._id]">{{'cart.continue shopping' | translate}} </button>
+              <p class="text-xl font-semibold text-black">
+                {{"cart.Total cart price :" | translate}} {{cartProducts.totalCartPrice | currency}}
+              </p>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <h3 routerLink="/allorders" class="cursor-pointer">
+    {{"cart.show your orders..." | translate}}
+    </h3>
+</div>

@@ -1,0 +1,16 @@
+<section>
+  <div class="container max-w-screen-xl  grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-10">
+    @for (cat of catList; track cat._id) {
+      <figure
+      class="overflow-hidden group relative mx-2 md:mx-0  border-[1px] rounded-lg  border-[#00f] hover:shadow-md hover:shadow-[#4a4a91] duration-300" [routerLink]="['/categoryDetails', cat._id]">
+      <img [src]="cat.image" class="w-full h-[300px]" alt="">
+      <figcaption class=" py-5">
+        <h2 class="text-center text-xl font-semibold">{{cat.name}}</h2>
+      </figcaption>
+    </figure>
+    }
+    <span>
+       <a  class="block rounded px-3 py-2 text-center text-2xl text-[#00f] cursor-pointer" routerLink="/subCategories">{{'categories.Sub Categories...' | translate}}</a>
+    </span>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+<section>
+  <div class="container max-w-screen-xl py-10 md:px-5">
+    <figure
+      class="overflow-hidden group relative border-[1px] rounded-lg  border-[#00f] hover:shadow-md hover:shadow-[#4a4a91] duration-300">
+      <i class="fa-regular fa-heart text-2xl absolute top-[10px] right-[10px] cursor-pointer text-red-600"
+        (click)="addWishProduct(detailsProduct._id)"></i>
+      <div class="flex flex-col md:flex-row justify-center md:justify-start items-center gap-5">
+        <div class="w-1/3">
+          <swiper-container  class="mySwiper"
+            thumbs-swiper=".mySwiper2" space-between="10" >
+            @for (img of detailsProduct.images; track $index) {
+            <swiper-slide>
+              <img [src]="detailsProduct.images[$index]" class="w-full h-[350px]" [alt]="detailsProduct.title" />
+            </swiper-slide>
+            }
+          </swiper-container>
+          <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+            watch-slides-progress="true">
+            @for (img of detailsProduct.images; track $index) {
+            <swiper-slide>
+              <img [src]="detailsProduct.images[$index]" class="w-full" [alt]="detailsProduct.title"/>
+            </swiper-slide>
+            }
+          </swiper-container>
+        </div>
+        <figcaption class="px-2 py-3">
+          <h2 class="text-blue-800 font-semibold text-xl mb-3">{{detailsProduct.category.name}}</h2>
+          <h3>{{detailsProduct.title}}</h3>
+          <h4 class="text-3xl font-semibold">about our product:</h4>
+          <p>{{detailsProduct.description}}</p>
+          <div class="mb-3">
+            <div>
+              @for (item of [1,2,3,4,5].slice(0, detailsProduct.ratingsAverage); track $index) {
+              <span><i class="fa-solid fa-star text-yellow-300"></i></span>
+              }
+              @if(detailsProduct.ratingsAverage %1 !== 0) {
+                <i class="fa-solid fa-star-half-stroke text-yellow-300"></i>
+              }
+              {{detailsProduct.ratingsAverage}}
+            </div>
+            <div class="flex justify-end items-center gap-5">
+              <span class="text-red-400 font-semibold">{{detailsProduct.price | currency}} </span>
+              <button class="rounded-lg bg-[#4a4af7] text-[#fff] p-2 hover:bg-[#00f] duration-700 flex items-center"
+                (click)="addProductToCart(detailsProduct.id)">
+                <i class="fa-solid fa-plus"></i>
+                Add
+              </button>
+            </div>
+          </div>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+</section>

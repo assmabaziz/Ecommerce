@@ -1,0 +1,116 @@
+<div class="shadow-lg shadow-gray-300 bg-[#efeffa] p-5 rounded-lg max-w-[50%] mx-auto">
+  <h1 class="text-xl mb-5 text-center font-medium">{{'register.regiter a new acount:' | translate}}</h1>
+  <form [formGroup]="registerForm" class="max-w-[90%] mx-auto" (ngSubmit)="registerSubmit()">
+    <div class="mb-3">
+      <label for="name" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'register.name:' | translate}}
+      </label>
+      <input formControlName="name" type="text" id="name"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5  " />
+      @if(registerForm.get("name")?.errors && (registerForm.get("name")?.touched || registerForm.get("name")?.dirty)) {
+      <div class="bg-red-200 p-3 mt-2 w-3/4 rounded-lg">
+        @if(registerForm.get("name")?.getError("required")) {
+        <p>
+          {{'register.name required' | translate}}
+        </p>
+        }@else if (registerForm.get("name")?.getError("minlength")) {
+        <p>
+          {{'register.name should be more than 3 caracters' | translate}}
+        </p>
+        }@else if (registerForm.get("name")?.getError("maxlength")) {
+        <p>
+          {{'register.name should be less than 20 caracters' | translate}}
+        </p>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="email" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'register.email:' | translate}}
+      </label>
+      <input formControlName="email" type="email" id="email"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5  " />
+      @if(registerForm.get("email")?.errors && registerForm.get("email")?.touched) {
+      <div class="bg-red-200 p-3 mt-2 w-3/4 rounded-lg">
+        @if(registerForm.get("email")?.getError("required")) {
+        <p>
+          {{'register.email required' | translate}}
+        </p>
+        }@else if (registerForm.get("email")) {
+        <p>
+          {{'register.email should be example&#64;example.com' | translate}}
+        </p>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'register.phone:' | translate}}
+      </label>
+      <input formControlName="phone" type="tel" id="phone"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5  " />
+      @if(registerForm.get("phone")?.errors && registerForm.get("phone")?.touched) {
+      <div class="bg-red-200 p-3 mt-2 w-3/4 rounded-lg">
+        @if(registerForm.get("phone")?.getError("required")) {
+        <p>
+          {{'register.phone required' | translate}}
+        </p>
+        }@else if (registerForm.get("phone")?.getError("pattern")) {
+        <p>
+          {{'register.phone should be 0123456789' | translate}}
+        </p>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="password" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'register.password:' | translate}}
+      </label>
+      <input formControlName="password" type="password" id="password"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5  " />
+      @if(registerForm.get("password")?.errors && registerForm.get("password")?.touched) {
+      <div class="bg-red-200 p-3 mt-2 w-3/4 rounded-lg">
+        @if(registerForm.get("password")?.getError("required")) {
+        <p>
+          {{'register.password required' | translate}}
+        </p>
+        }@else if (registerForm.get("password")?.getError("pattern")) {
+        <p>
+          {{'register.pasword should be more than 6 catracters' | translate}}
+        </p>
+        }
+      </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="repassword" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
+        {{'register.repassword:' | translate}}
+      </label>
+      <input formControlName="rePassword" type="password" id="repassword"
+        class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0000FF] focus:border-[#0000FF] block w-full p-2.5  " />
+    </div>
+    @if(messageError) {
+    <div class="bg-red-200 p-3 mt-2 w-3/4 rounded-lg">
+      <p>
+        {{'register.Account Already Exists' | translate}}
+      </p>
+    </div>
+    }
+    @if(isSuccess) {
+    <div class="bg-green-200 p-3 mt-2 w-3/4 rounded-lg">
+      <p>
+        {{'register.account successfully created' | translate}}
+      </p>
+    </div>
+    }
+    <button type="submit"
+      class="text-white bg-[#0000FF] hover:bg-[#3232ff]  focus:outline-none  font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center disabled:bg-gray-300 disabled:cursor-no-drop  block ms-auto">Submit
+      @if (isLoading) {
+      <i class="fa-solid fa-spin fa-spinner"></i>
+      } </button>
+  </form>
+</div>
+<!-- [disabled]="registerForm.invalid" -->
