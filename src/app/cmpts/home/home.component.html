@@ -53,10 +53,10 @@
 </section>
 <section>
   <div
-    class="container max-w-screen-xl  grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-10 sm:px-5">
+    class="container max-w-screen-xl  grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-10 ">
     @for (product of productList.slice(0, 12) ; track product.id) {
     <figure
-      class="overflow-hidden group  border-[1px] rounded-lg  border-[#00f] hover:shadow-md hover:shadow-[#4a4a91] duration-300">
+      class="overflow-hidden group  border-[1px] rounded-lg  border-[#00f] hover:shadow-md hover:shadow-[#4a4a91] duration-300 mx-3 md:mx-0">
       <div class="relative">
         <div class=" group ">
           <div
@@ -104,7 +104,7 @@
 </section>
 <section>
   <div class="container max-w-screen-xl  grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 py-10 sm:px-5">
-    <div>
+    <div class="p-4">
       <div class="mb-4">
         <i class="fa-regular fa-clock text-[4.5rem] text-[#00f]"></i>
       </div>
@@ -115,7 +115,7 @@
         {{'home. Get your order delivered to your doorstep at the earliest from DirDora pickup stores near you.' | translate}}
       </p>
     </div>
-    <div>
+    <div class="p-4">
       <div class="mb-4">
         <i class="fa-solid fa-gift text-[4.5rem] text-[#00f]"></i>
       </div>
@@ -126,7 +126,7 @@
         {{'home.Cheaper prices than your local supermarket, great cashback offers to top it off. Get best pricess & offers' | translate}}
       </p>
     </div>
-    <div>
+    <div class="p-4">
       <div class="mb-4">
         <i class="fa-solid fa-box-open text-[4.5rem] text-[#00f]"></i>
       </div>
@@ -137,7 +137,7 @@
         {{'home.Choose from 5000+ products across food, personal care, household, bakery, veg and non-veg & other categories.' | translate}}
       </p>
     </div>
-    <div>
+    <div class="p-4">
       <div class="mb-4">
         <i class="fa-solid fa-repeat text-[4.5rem] text-[#00f]"></i>
       </div>

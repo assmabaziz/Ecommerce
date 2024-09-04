@@ -5,13 +5,13 @@
     "categories":"CATEGORIES",
     "brands":"BRANDS",
     "signout":"SignOut",
-    "language":"Language",
+    "language":"LANGUAGE",
     "English":"English",
     "Arabic":"Arabic"
   },"navbarAuth": {
     "login": "LOGIN",
     "register":"REGISTER",
-    "language":"Language",
+    "language":"LANGUAGE",
     "English":"English",
     "Arabic":"Arabic"
   }, "footer" : {

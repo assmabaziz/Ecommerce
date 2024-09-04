@@ -50,7 +50,7 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent, title: 'Home' },
+      { path: 'home', component: HomeComponent, title: 'DirDora' },
       {
         path: 'brands',
         loadComponent: () =>

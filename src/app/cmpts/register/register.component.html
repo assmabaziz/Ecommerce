@@ -1,6 +1,6 @@
-<div class="shadow-lg shadow-gray-300 bg-[#efeffa] p-5 rounded-lg max-w-[50%] mx-auto">
+<div class="shadow-lg shadow-gray-300 bg-[#efeffa] p-5 rounded-lg lg:max-w-[50%] mx-auto">
   <h1 class="text-xl mb-5 text-center font-medium">{{'register.regiter a new acount:' | translate}}</h1>
-  <form [formGroup]="registerForm" class="max-w-[90%] mx-auto" (ngSubmit)="registerSubmit()">
+  <form [formGroup]="registerForm" class="lg:max-w-[90%] mx-auto" (ngSubmit)="registerSubmit()">
     <div class="mb-3">
       <label for="name" class="block mb-2 text-sm text-gray-900 dark:text-white font-light text-[1.5rem]">
         {{'register.name:' | translate}}
@@ -113,4 +113,3 @@
       } </button>
   </form>
 </div>
-<!-- [disabled]="registerForm.invalid" -->

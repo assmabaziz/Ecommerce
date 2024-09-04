@@ -24,7 +24,10 @@ export class NavBlankComponent implements OnInit {
   wishTotalItems:Signal<number> = computed(()=> this._WishlistService.wishItems())
   constructor(private _FlowbitService: FlowbitService) {}
   ngOnInit(): void {
-    this._FlowbitService.loadFlowbite(() => {});
+    this._FlowbitService.loadFlowbite(flowbite => {
+      // Your custom code here
+      console.log('Flowbite loaded', flowbite);
+    });
     this._CartService.getProductCart().subscribe({
       next: (res) => {
         this._CartService.CartItems.set(res.numOfCartItems)

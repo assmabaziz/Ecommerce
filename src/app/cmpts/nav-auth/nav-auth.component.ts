@@ -12,14 +12,33 @@ import { EcommerceTranslateService } from '../../core/services/ecommerce-transla
   styleUrl: './nav-auth.component.scss',
 })
 export class NavAuthComponent implements OnInit {
+  isShown: boolean = false;
+  listLangShown: boolean = false;
   private readonly _EcommerceTranslateService = inject(
     EcommerceTranslateService
   );
-  constructor(private _FlowbitService: FlowbitService) {}
+  private readonly _FlowbitService = inject(FlowbitService);
+  constructor() {}
   ngOnInit(): void {
-    this._FlowbitService.loadFlowbite(() => {});
+    this._FlowbitService.loadFlowbite((flowbite) => {
+      console.log(flowbite);
+    });
   }
   change(lang: string): void {
     this._EcommerceTranslateService.changeLang(lang);
+  }
+  showNav(): void {
+    if (this.isShown == false) {
+      this.isShown = true;
+    } else {
+      this.isShown = false;
+    }
+  }
+  showLanList(): void {
+    if (this.listLangShown) {
+      this.listLangShown = false;
+    } else {
+      this.listLangShown = true;
+    }
   }
 }
