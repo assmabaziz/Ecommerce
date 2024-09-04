@@ -37,8 +37,11 @@ export class NavAuthComponent implements OnInit {
   showLanList(): void {
     if (this.listLangShown) {
       this.listLangShown = false;
+      console.log(this.showLanList);
+
     } else {
       this.listLangShown = true;
+      console.log(this.showLanList);
     }
   }
 }
